@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap');
+:root{
+    --color1:#ffff;
+    --color2:#333D51;
+    --color3:#D3AC2B;
+    --color4:#CBD0D8 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* Gestion du header */
+.img-logo{
+    height: 50px;
+}
+.header{
+height: 70vh;
+background: url("./Image/fond.jpg") no-repeat center/cover;
+transition: all 0.4s ease-in-out;
+}
+.principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right:10px;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+.navbar ul a{
+    margin-right: 15px;
+    color: var(--color1);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.navbar ul a:hover{
+    border-bottom: 2px solid var(--color2);
+    color: var(--color3);
+}
+.info-personnel{
+    text-align: center;
+    padding-top: 15px;
+}
+.info-personnel img{
+    border-radius: 80%;
+    box-shadow: 3px 4px 6px 2px var(--color3);
+}
+.info-personnel h3{
+    margin-top: 10px;
+    color: var(--color4);
+    font-size: 1.2rem;
+}
+.btn button{
+    height: 4vh;
+    width: 10vw;
+    border-radius: 10px;
+}
+.btn button:hover{
+    letter-spacing: 3px;
+    color: var(--color2);
+    cursor: pointer;
+}
+.txt-info{
+    margin-top: 5px;
+    color: var(--color3);
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.4s;
+}
+.btn button:hover + .txt-info{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Gestion de la deuxieme partie */
+.information{
+    height: 50vh;
+}
+.information h1,p{
+    text-align: center;
+    margin-top: 15px;
+}
+.information h1,p{
+    animation-duration: 1s;
+    animation-name: slideInleft ;
+}
+.image-info{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.image-info img{
+    border: 2px solid var(--color3);
+}
+/* Gestion de la troisieme partie */
+.images{
+    height: 60vh;
+}
+.images h2{
+    text-align: center;
+}
+.btn-images button{
+    margin: 0 auto;
+    display: block;
+    margin-top:10px;
+    margin-bottom: 5px;
+    height: 4vh;
+    width: 10vw;
+    border-radius: 10px;
+    /* color: var(--color4); */
+}
+.btn-images button,a{
+    text-decoration: none;
+}
+.boite-cours{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.boite, .boite1, .boite2{
+    height: 40vh;
+    width: 16vw;
+    background: var(--color2);
+    border-radius: 10px;
+}
+.boite{
+    margin-left: 40px;
+}
+/* .boite:hover .ajouter{
+    o
+} */
+.boite2{
+    margin-right:30px ;
+}
+.boite img,.boite1 img, .boite2 img{
+    margin: 0 auto;
+    display: block;
+    padding-top: 10px;
+    border-radius: 50%;
+}
+.boite-cours h3{
+    text-align: center;
+    color: var(--color3);
+}
+.boite-cours p{
+    color: var(--color4);
+}
+/* Gestion de la quatrieme partie */
+#contact{
+    height: 45vh;
+}
+#contact h2{
+    text-align: center;
+}
+.gestion-contact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+input{
+    height: 4vh;
+    width: 25vw;
+    margin-top: 5px;
+}
+textarea{
+    height: 20vh;
+    width:25vw ;
+    margin-top: 5px;
+    resize: none;
+}
+.image-contact{
+    margin-right: 40px;
+}
+.formulaires{
+    margin-left: 40px;
+}
+.formulaires button{
+    height: 4vh;
+    width: 10vw;
+    cursor: pointer;
+}
+.formulaires button:hover{
+    background: var(--color2);
+    color: var(--color4);
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+/* Gestion du pieds pages */
+footer{
+    height: 20vh;
+    background: var(--color4);
+}
+.containar-foot{
+    margin-top: 40px;
+}
+.containar-foot{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+.responsable ul{
+    list-style: none;
+}
+.lien a{
+    display: flex;
+    flex-direction: column;
+}
+.click{
+    background: url("./Image/ammm.jpg") no-repeat center/cover;
+    transition: all 0.6s ease-in-out;
+}
+.boite-1{
+    background: url("./Image/Aquaurora\ 4.jpg") no-repeat;
+    /* height: 40vh;
+    width: 16vw;
+    border-radius: 10px; */
+}
+@keyframes slideInleft{
+    from{
+      transform: translateX(-100%);  
+    }
+    to{
+      transform:translateX(0) ;
+    }
+}
+/* Gestion de la partie mobile */
+@media only screen and (max-width:768px){
+    .header{
+        height: 40vh;
+        background: url("./Image/fond.jpg") no-repeat center/cover;
+        width: 100%;
+    }
+    .click{
+        background: url("./Image/ammm.jpg") no-repeat center/cover;
+        transition: all 0.6s ease-in-out;
+    }
+    .principal{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar ul a{
+        margin-right: 15px;
+        color: var(--color1);
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .info-personnel img{
+        border-radius: 80%;
+        box-shadow: 3px 4px 6px 2px var(--color3);
+        height: 70px;
+    }
+    .info-personnel h3{
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    .btn button{
+        height: 4vh;
+        width: 25vw;
+        border-radius: 10px;
+        letter-spacing:1px;
+    }
+    .txt-info{
+        margin-top: 5px;
+        color: var(--color3);
+        opacity: 0;
+        transform: translateY(15px);
+        transition: 0.4s;
+        font-size: 10px;
+    }
+    .information h1{
+        font-size: 15px;
+    }
+    .information p{
+        font-size: 12px;
+    }
+    .information{
+        height: 30vh;
+    }
+    .image-info img{
+       height: 80px;
+    }
+    .images{
+        height: 45vh;
+    }
+    .images h2{
+        text-align: center;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .btn-images button{
+        margin: 0 auto;
+        display: block;
+        margin-top:10px;
+        margin-bottom: 5px;
+        height: 4vh;
+        width: 25vw;
+        border-radius: 10px;
+        /* color: var(--color4); */
+    }
+    .boite, .boite1, .boite2{
+        height: 25vh;
+        width: 40vw;
+        background: var(--color2);
+        border-radius: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+    .boite img,.boite1 img, .boite2 img{
+        margin: 0 auto;
+        display: block;
+        padding-top: 10px;
+        border-radius: 50%;
+        height: 40px;
+    }
+    .boite-cours p{
+        font-size: 10px;
+    }
+    .boite-cours h3{
+        font-size: 13px;
+    }
+    .boite{
+        margin-left: 15px;
+    }
+    .boite2{
+        margin-right:15px ;
+    }
+    .image-contact img{
+        height: 140px;
+    }
+    #contact{
+        height: 40vh;
+    }
+    #contact h2{
+        text-align: center;
+        font-size: 16px;
+    }
+    .image-contact{
+        margin-right: 30px;
+    }
+    input{
+        height: 4vh;
+        width: 30vw;
+        margin-top: 5px;
+    }
+    textarea{
+        height: 12vh;
+        width:30vw ;
+        margin-top: 5px;
+        resize: none;
+    }
+    .formulaires button{
+        height: 4vh;
+        width: 14vw;
+        cursor: pointer;
+    }
+    .containar-foot{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 15px;
+    }
+    .responsable ul{
+        list-style: none;
+        font-size: 13px;
+    }
+    .lien a{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    .reseaux img{
+        height: 20px;
+    }
+}
